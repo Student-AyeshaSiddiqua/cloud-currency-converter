@@ -20,6 +20,8 @@ def index():
 
         response = requests.get(API_URL + from_currency)
         data = response.json()
+        print(data)  # for debugging: shows the actual API response
+
 
         if data['result'] == 'success':
             rate = data['conversion_rates'][to_currency]
