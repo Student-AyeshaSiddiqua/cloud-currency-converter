@@ -4,7 +4,8 @@ import requests
 app = Flask(__name__)
 
 # Replace with your own API key from exchangerate-api.com
-API_KEY = 'YOUR_API_KEY_HERE'
+import os
+API_KEY = os.environ.get('API_KEY')  # Securely load from environment
 API_URL = f"https://v6.exchangerate-api.com/v6/{API_KEY}/latest/"
 
 @app.route('/', methods=['GET', 'POST'])
