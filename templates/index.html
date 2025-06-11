@@ -14,7 +14,16 @@
             <select name="from" id="from">
                 {% for currency in currencies %}
                     <option value="{{ currency }}">
-                        {{ currency }} {% if currency == 'USD' %}🇺🇸{% elif currency == 'EUR' %}🇪🇺{% elif currency == 'GBP' %}🇬🇧{% elif currency == 'INR' %}🇮🇳{% elif currency == 'JPY' %}🇯🇵{% elif currency == 'AUD' %}🇦🇺{% elif currency == 'CAD' %}🇨🇦{% elif currency == 'CNY' %}🇨🇳{% endif %}
+                        {% if currency == 'USD' %}🇺🇸 USD - United States Dollar
+                        {% elif currency == 'EUR' %}🇪🇺 EUR - Euro
+                        {% elif currency == 'GBP' %}🇬🇧 GBP - British Pound
+                        {% elif currency == 'INR' %}🇮🇳 INR - Indian Rupee
+                        {% elif currency == 'JPY' %}🇯🇵 JPY - Japanese Yen
+                        {% elif currency == 'AUD' %}🇦🇺 AUD - Australian Dollar
+                        {% elif currency == 'CAD' %}🇨🇦 CAD - Canadian Dollar
+                        {% elif currency == 'CNY' %}🇨🇳 CNY - Chinese Yuan
+                        {% else %}{{ currency }}
+                        {% endif %}
                     </option>
                 {% endfor %}
             </select>
@@ -23,7 +32,16 @@
             <select name="to" id="to">
                 {% for currency in currencies %}
                     <option value="{{ currency }}">
-                        {{ currency }} {% if currency == 'USD' %}🇺🇸{% elif currency == 'EUR' %}🇪🇺{% elif currency == 'GBP' %}🇬🇧{% elif currency == 'INR' %}🇮🇳{% elif currency == 'JPY' %}🇯🇵{% elif currency == 'AUD' %}🇦🇺{% elif currency == 'CAD' %}🇨🇦{% elif currency == 'CNY' %}🇨🇳{% endif %}
+                        {% if currency == 'USD' %}🇺🇸 USD - United States Dollar
+                        {% elif currency == 'EUR' %}🇪🇺 EUR - Euro
+                        {% elif currency == 'GBP' %}🇬🇧 GBP - British Pound
+                        {% elif currency == 'INR' %}🇮🇳 INR - Indian Rupee
+                        {% elif currency == 'JPY' %}🇯🇵 JPY - Japanese Yen
+                        {% elif currency == 'AUD' %}🇦🇺 AUD - Australian Dollar
+                        {% elif currency == 'CAD' %}🇨🇦 CAD - Canadian Dollar
+                        {% elif currency == 'CNY' %}🇨🇳 CNY - Chinese Yuan
+                        {% else %}{{ currency }}
+                        {% endif %}
                     </option>
                 {% endfor %}
             </select>
