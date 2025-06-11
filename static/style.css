@@ -93,3 +93,23 @@ button[type="submit"]:hover {
     background: linear-gradient(90deg, #f093fb, #f5576c);
     transform: translateY(-2px);
 }
+select {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;base64,...'); /* Optional: Add a custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+select:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
+}

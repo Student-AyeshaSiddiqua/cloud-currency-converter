@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Currency Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/currency-flags/3.2.1/currency-flags.min.css">
+
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
@@ -12,39 +14,30 @@
 
             <label for="from">From:</label>
             <select name="from" id="from">
-                {% for currency in currencies %}
-                    <option value="{{ currency }}">
-                        {% if currency == 'USD' %}🇺🇸 USD - United States Dollar
-                        {% elif currency == 'EUR' %}🇪🇺 EUR - Euro
-                        {% elif currency == 'GBP' %}🇬🇧 GBP - British Pound
-                        {% elif currency == 'INR' %}🇮🇳 INR - Indian Rupee
-                        {% elif currency == 'JPY' %}🇯🇵 JPY - Japanese Yen
-                        {% elif currency == 'AUD' %}🇦🇺 AUD - Australian Dollar
-                        {% elif currency == 'CAD' %}🇨🇦 CAD - Canadian Dollar
-                        {% elif currency == 'CNY' %}🇨🇳 CNY - Chinese Yuan
-                        {% else %}{{ currency }}
-                        {% endif %}
-                    </option>
-                {% endfor %}
-            </select>
+    <option value="USD" class="flag-icon flag-icon-us"> USD - United States Dollar</option>
+    <option value="EUR" class="flag-icon flag-icon-eu"> EUR - Euro</option>
+    <option value="GBP" class="flag-icon flag-icon-gb"> GBP - British Pound</option>
+    <option value="INR" class="flag-icon flag-icon-in"> INR - Indian Rupee</option>
+    <option value="JPY" class="flag-icon flag-icon-jp"> JPY - Japanese Yen</option>
+    <option value="AUD" class="flag-icon flag-icon-au"> AUD - Australian Dollar</option>
+    <option value="CAD" class="flag-icon flag-icon-ca"> CAD - Canadian Dollar</option>
+    <option value="CNY" class="flag-icon flag-icon-cn"> CNY - Chinese Yuan</option>
+</select>
+
+<select name="to" id="to">
+    <option value="USD" class="flag-icon flag-icon-us"> USD - United States Dollar</option>
+    <option value="EUR" class="flag-icon flag-icon-eu"> EUR - Euro</option>
+    <option value="GBP" class="flag-icon flag-icon-gb"> GBP - British Pound</option>
+    <option value="INR" class="flag-icon flag-icon-in"> INR - Indian Rupee</option>
+    <option value="JPY" class="flag-icon flag-icon-jp"> JPY - Japanese Yen</option>
+    <option value="AUD" class="flag-icon flag-icon-au"> AUD - Australian Dollar</option>
+    <option value="CAD" class="flag-icon flag-icon-ca"> CAD - Canadian Dollar</option>
+    <option value="CNY" class="flag-icon flag-icon-cn"> CNY - Chinese Yuan</option>
+</select>
+
 
             <label for="to">To:</label>
-            <select name="to" id="to">
-                {% for currency in currencies %}
-                    <option value="{{ currency }}">
-                        {% if currency == 'USD' %}🇺🇸 USD - United States Dollar
-                        {% elif currency == 'EUR' %}🇪🇺 EUR - Euro
-                        {% elif currency == 'GBP' %}🇬🇧 GBP - British Pound
-                        {% elif currency == 'INR' %}🇮🇳 INR - Indian Rupee
-                        {% elif currency == 'JPY' %}🇯🇵 JPY - Japanese Yen
-                        {% elif currency == 'AUD' %}🇦🇺 AUD - Australian Dollar
-                        {% elif currency == 'CAD' %}🇨🇦 CAD - Canadian Dollar
-                        {% elif currency == 'CNY' %}🇨🇳 CNY - Chinese Yuan
-                        {% else %}{{ currency }}
-                        {% endif %}
-                    </option>
-                {% endfor %}
-            </select>
+            
 
             <button type="submit">🔄 Convert</button>
         </form>
